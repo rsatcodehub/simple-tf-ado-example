@@ -1,0 +1,12 @@
+# Resource Group
+az group create -l australiaeast -n simpletfadoRG
+
+#Storage Account
+
+az storage account create -n simpletfadoSA -g simpletfadoRG -l australiaeast --sku Standard_LRS
+
+## To add name checking if it is available 
+
+#Storage Container
+
+az storage container create -n simpletfadoContainer --account-name simpletfadoSA
